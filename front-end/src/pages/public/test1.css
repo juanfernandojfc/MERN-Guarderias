@@ -1,0 +1,145 @@
+body{
+    background-color: white;
+}
+
+.contenedor{
+    background-color: rgb(112, 112, 214);
+    border: 1px solid rgb(75, 75, 201);
+    
+    /*---LLENADO DE LA GRILLA*/
+    display: grid;
+    grid-auto-flow: column; /* la forma en como se va llenando la grilla*/
+    grid-template-rows:100px  100px 100px; /* crear 3 filas de 100px*/
+    grid-auto-columns: 100px; /* definir el tamaño de cualquier columna que se cree*/
+    /* gap: 30px; */
+
+
+    /*-----ALINEACION DE ITEMS--
+        ITEM(DENTRO DEL CONTENEDOR),
+        EL CONTENEDOR-CONTENT(AJUSTA LA GRILLA COMO UN BLOQUE) Y 
+        GRID-ITEMS - SELF */
+    /* JUSTIFI - ALINEACION HORIZONTAL
+        ALIGN - ALINEACION VERTICAL
+        PLACE - MEZCLA DE JUSTIFI Y ALIGN
+
+    */
+}
+
+.item{
+    background-color: azure;
+    border: 3px solid gray;
+    font-size: 4rem;
+}
+
+.contenedor2{
+    /* place-content: center; */
+    background-color: greenyellow;
+    place-content: center;
+    display: grid;
+    grid-auto-flow: row; /* la forma en como se va llenando la grilla*/
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    grid-auto-columns: 200px; /* definir el tamaño de cualquier columna que se cree*/
+}
+
+.item2{
+    place-self: end;
+    background-color: rgb(41, 189, 115);
+    border: 3px solid gray;
+    font-size: 5em;
+}
+
+/* ---------------UBICAR ELEMENTO DENTRO DE LA GRILLA _---------  ContenedorUbicacion*/
+
+.contenedorUbicacion{
+    /* place-content: center; */
+    display: grid;
+    background-color: rgb(223, 141, 255);
+    place-content: center;
+    grid-auto-flow: row; /* la forma en como se va llenando la grilla*/
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 150px 150px 150px;
+    grid-auto-columns: 200px; /* definir el tamaño de cualquier columna que se cree*/
+}
+
+.itemU1{
+    /* header */
+    background-color: rgb(41, 189, 115);
+    border: 3px solid gray;
+    font-size: 5em;
+    grid-column: 1/4;
+}
+.itemU2{
+    /* sidebar */
+    background-color: rgb(115, 189, 41);
+    border: 3px solid gray;
+    font-size: 5em;
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+.itemU3{
+    /* main content */
+    background-color: rgb(189, 63, 41);
+    border: 3px solid gray;
+    font-size: 5em;
+    /* grid-column: 2/4;
+    grid-row: 2/4;
+    grid area reemplaza a grid-colum y grid-row (fila inicio/ col inicio / fila fin / col fin) */
+    
+    grid-area: 2/2/4/4;
+}
+
+/* -------------------posicionamiento usando grid areas--------------------- */
+.reto{
+    
+    display: grid;
+    background-color: rgb(77, 98, 118);
+    border: 1px solid black;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    /* grid-template-areas: "uno dos dos"
+                        "uno tres tres"
+                         "uno tres tres"; */
+    grid-auto-flow: row;
+    place-content: center;
+}
+
+.itemR1{
+    background-color: rgb(127, 255, 153);
+    border: 1px solid black;
+    grid-area: 1/1/2/2;
+
+}
+.itemR2{
+    background-color: rgb(238, 255, 127);
+    border: 1px solid black;
+    grid-area: 1/2/2/4;
+}
+.itemR3{
+    background-color: rgb(127, 163, 255);
+    border: 1px solid black;
+    grid-area: 2/1/3/3;
+}
+.itemR4{
+    background-color: rgb(127, 255, 153);
+    border: 1px solid black;
+    /* grid-area: 2/3/3/4; */
+}
+.itemR5{
+    background-color: rgb(127, 255, 153);
+    border: 1px solid black;
+    /* grid-area: 3/1/4/2; */
+}
+.itemR6{
+    background-color: rgb(238, 255, 127);
+    border: 1px solid black;
+    /* grid-area: 3/2/4/3; */
+}
+.itemR7{
+    background-color: rgb(127, 163, 255);
+    border: 1px solid black;
+    /* grid-area: 3/3/4/4; */
+}
+
+
+
